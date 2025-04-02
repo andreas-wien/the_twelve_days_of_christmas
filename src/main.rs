@@ -80,8 +80,8 @@ fn main() {
             counter.1
         );
         let things = &things_to_give[..=i];
-        for (j, thing) in things.iter().enumerate() {
-            let con = if j == things.len() - 1 && j != 0 {
+        for (j, thing) in things.iter().enumerate().rev() {
+            let con = if j == 0 && j != things.len() - 1 {
                 " and"
             } else {
                 ","
